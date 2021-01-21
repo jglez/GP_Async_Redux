@@ -8,6 +8,8 @@ const initialState = {
 };
 
 export const friendsReducer = (state = initialState, action) => {
+  console.log() // for ADD_FRIEND action; adding a new friend to our array
+
   switch (action.type) {
     case ADD_FRIEND:
       const newFriend = {

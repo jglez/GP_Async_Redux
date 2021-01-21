@@ -15,10 +15,11 @@ class FriendsList extends React.Component {
   addFriend = e => {
     e.preventDefault();
     this.props.addNewFriend(this.state.newFriend);
-    this.setState({newFriend:""});
+    this.setState({ newFriend: "" });
   };
 
   toggleFriend = (e, index) => {
+    console.log() // for TOGGLE_FRIEND action; 'dragon status' toggle
     e.preventDefault();
     this.props.toggleFriend(index);
   };
@@ -50,6 +51,7 @@ const mapStateToProps = state => ({
   friends: state.friendsReducer.friends
 });
 
+// Connected to Redux store
 export default connect(
   mapStateToProps,
   { addNewFriend, toggleFriend }
